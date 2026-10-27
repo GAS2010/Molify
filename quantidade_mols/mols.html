@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mols | Calculadora de Mols</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app" data-mode="mols">
+    <header class="header">
+      <h1>Mols</h1>
+      <a class="icon-btn" href="index.html" aria-label="Voltar">←</a>
+    </header>
+
+    <nav class="tabs" aria-label="Tipo de conversão">
+      <a class="tab active" href="mols.html" data-mode="mols">
+        <span class="circle">⚗</span>
+        <span>Mols</span>
+      </a>
+      <a class="tab" href="peso.html" data-mode="peso">
+        <span class="circle">♙</span>
+        <span>Peso</span>
+      </a>
+      <a class="tab" href="litros.html" data-mode="litros">
+        <span class="circle">♢</span>
+        <span>Litros</span>
+      </a>
+    </nav>
+
+    <section class="card">
+      <h2>Informe a quantidade de mols</h2>
+
+      <div class="field">
+        <label for="valor">Quantidade</label>
+        <div class="input-wrap">
+          <span class="ico">⚗</span>
+          <input id="valor_mols" type="text" inputmode="decimal" placeholder="Ex.: 2,5 mol">
+          <span class="unit">mol</span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="massa-molar">Massa molar do composto</label>
+        <div class="input-wrap">
+          <span class="ico">⚖</span>
+          <input id="massa-molar" type="text" inputmode="decimal" placeholder="Ex.: 18,02 g/mol">
+          <span class="unit">g/mol</span>
+        </div>
+      </div>
+
+      <div class="hint">Exemplos: H₂O = 18,02 | CO₂ = 44,01 | NaCl = 58,44 g/mol</div>
+      <button id="calcular" class="btn" type="button">Calcular</button>
+    </section>
+
+    <section class="card">
+      <h2>Resultados</h2>
+      <div class="results">
+        <div class="result">
+          <div class="label">♙ Peso</div>
+          <div class="value" id="peso">—<small> g</small></div>
+        </div>
+        <div class="result">
+          <div class="label">♢ Volume</div>
+          <div class="value" id="volume">—<small> L</small></div>
+        </div>
+      </div>
+      <div class="note">Para calcular o volume de gases, foi considerado o volume molar em CNTP (0 °C e 1 atm).</div>
+    </section>
+  </main>
+<script src="qtd_mol.js"></script>
+</body>
+</html>

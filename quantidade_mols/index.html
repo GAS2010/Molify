@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Mols</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app" data-mode="mols">
+    <header class="header">
+      <h1>Calculadora</h1>
+      <button class="icon-btn" type="button" aria-label="Menu">☰</button>
+    </header>
+
+    <nav class="tabs" aria-label="Escolha o tipo de cálculo">
+      <a class="tab active" href="mols.html" data-mode="mols">
+        <span class="circle">⚗</span>
+        <span>Mols</span>
+      </a>
+      <a class="tab" href="peso.html" data-mode="peso">
+        <span class="circle">♙</span>
+        <span>Peso</span>
+      </a>
+      <a class="tab" href="litros.html" data-mode="litros">
+        <span class="circle">♢</span>
+        <span>Litros</span>
+      </a>
+    </nav>
+
+    <section class="card">
+      <h2>Selecione a conversão</h2>
+
+      <div class="field">
+        <label for="componente">Composto</label>
+        <div class="input-wrap">
+          <span class="ico">⚗</span>
+          <input id="componente" type="text" placeholder="Ex.: H₂O">
+        </div>
+      </div>
+
+      <div class="hint">Informe a massa molar do composto para obter resultados precisos.</div>
+      <button class="btn" type="button">Ir para a calculadora</button>
+    </section>
+  </main>
+<script src="qtd_mol.js"></script>
+</body>
+</html>
