@@ -75,7 +75,7 @@ function desenharCalculadora() {
   app.innerHTML = `${cabecalho(m.titulo)}${desenharSeparadores()}
     <section class="card">
       <div class="field"><label for="quantidade">${m.instrucao}</label><div class="input-wrap"><span class="ico">${icones[modoAtual]}</span><input id="quantidade" type="text" inputmode="decimal" placeholder="${m.placeholder}" autocomplete="off"><span class="unit">${m.unidade}</span></div></div>
-      <div class="field"><label for="massa-molar">Massa molar do composto</label><div class="input-wrap"><span class="ico">${icones.composto}</span><input id="massa-molar" type="text" inputmode="decimal" placeholder="Ex.: 58,44" value="${formatar(compostoAtual.massa)}" autocomplete="off"><span class="unit">g/mol</span></div></div>
+      <div class="field"><label for="massa-molar">Massa molar do composto</label><div class="input-wrap"><span class="ico">${icones.composto}</span><input id="massa-molar" type="text" inputmode="decimal" placeholder="Ex.: 58,44" " autocomplete="off"><span class="unit">g/mol</span></div></div>
       <p class="hint">Ex.: ${compostos.slice(0,3).map(c => `<button class="hintbtn" type="button" data-acao="selecionar" data-formula="${c.formula}">${c.nome} = ${formatar(c.massa)}</button>`).join(" &nbsp;|&nbsp; ")}</p>
       <button class="btn" type="button" data-acao="calcular">${icones.calcular} &nbsp; Calcular</button>
       <p class="note" id="erro" role="alert" hidden></p>
