@@ -1,3 +1,4 @@
+
 "use strict";
 
 /* Calculadora de mols — usa Vm = 22,4 L/mol nas CNTP (0 °C, 1 atm). */
